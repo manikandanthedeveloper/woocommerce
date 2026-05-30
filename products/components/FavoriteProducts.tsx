@@ -7,13 +7,13 @@ const FavoriteProducts = ({ product }: { product: IProduct }) => {
 	return (
 		<button
 			onClick={() => toggleFavorite(product)}
-			className="absolute top-2 right-2 p-1 rounded-none bg-white shadow hover:bg-gray-100 transition cursor-pointer"
+			className="absolute top-2 right-2 p-1 rounded-none transition cursor-pointer"
 		>
 			<Heart
 				className={
 					isFavorite(product.databaseId)
 						? "fill-red-500 text-red-500"
-						: ""
+						: "text-white"
 				}
 			/>
 		</button>

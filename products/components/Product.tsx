@@ -21,16 +21,14 @@ const Product = ({ product }: IProductProps) => {
 		<ProductCard>
 			<div className="relative">
 				<FavoriteProducts product={product} />
-				<ProductImage image={image} />
-				<Link
-					href={`/products/${databaseId}`}
-					className="text-lg font-semibold mb-2"
-				>
-					{name}
+				<Link href={`/products/${databaseId}`}>
+					<ProductImage image={image} />
+					<div className="text-lg font-semibold mb-2">{name}</div>
+
+					<div className="prose line-clamp-2 prose-sm text-gray-600 mb-4 min-h-12">
+						{description}
+					</div>
 				</Link>
-				<div className="prose line-clamp-2 prose-sm text-gray-600 mb-4 min-h-12">
-					{description}
-				</div>
 				<ProductPrice
 					price={price}
 					salePrice={salePrice}
