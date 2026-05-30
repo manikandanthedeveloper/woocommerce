@@ -1,10 +1,13 @@
 import Banner from "@/components/Banner";
+import HomeProducts from "@/home/components/HomeProducts";
 
 export default function Home() {
 	return (
 		<div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
 			<Banner />
-			<main className="container mx-auto my-6"></main>
+			<main className="container mx-auto my-6">
+				<HomeProducts />
+			</main>
 		</div>
 	);
 }
