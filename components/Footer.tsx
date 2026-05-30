@@ -8,6 +8,7 @@ import InstagramLogo from "@/assets/images/social_icons/instagram.svg";
 import PinterestLogo from "@/assets/images/social_icons/pinterest.svg";
 import YoutubeLogo from "@/assets/images/social_icons/youtube.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
 	return (
@@ -18,44 +19,44 @@ const Footer = () => {
 						<h3 className="text-lg font-semibold mb-4">Shop</h3>
 						<ul>
 							<li>
-								<a
-									href="/shop.html"
+								<Link
+									href="/products"
 									className="hover:text-primary"
 								>
 									Shop
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/single-product-page.html"
+								<Link
+									href="/products"
 									className="hover:text-primary"
 								>
 									Women
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/shop.html"
+								<Link
+									href="/products"
 									className="hover:text-primary"
 								>
 									Men
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/single-product-page.html"
+								<Link
+									href="/products"
 									className="hover:text-primary"
 								>
 									Shoes
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/single-product-page.html"
+								<Link
+									href="/products"
 									className="hover:text-primary"
 								>
 									Accessories
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -63,36 +64,36 @@ const Footer = () => {
 						<h3 className="text-lg font-semibold mb-4">Pages</h3>
 						<ul>
 							<li>
-								<a
-									href="/shop.html"
+								<Link
+									href="/about"
 									className="hover:text-primary"
 								>
-									Shop
-								</a>
+									About
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/single-product-page.html"
+								<Link
+									href="/contact"
 									className="hover:text-primary"
 								>
-									Product
-								</a>
+									Contact
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/checkout.html"
+								<Link
+									href="/contact"
 									className="hover:text-primary"
 								>
 									Checkout
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/404.html"
+								<Link
+									href="/contact"
 									className="hover:text-primary"
 								>
 									404
-								</a>
+								</Link>
 							</li>
 						</ul>
 					</div>
@@ -100,28 +101,28 @@ const Footer = () => {
 						<h3 className="text-lg font-semibold mb-4">Account</h3>
 						<ul>
 							<li>
-								<a
-									href="/cart.html"
+								<Link
+									href="/contact"
 									className="hover:text-primary"
 								>
 									Cart
-								</a>
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/register.html"
+								<Link
+									href="/signup"
 									className="hover:text-primary"
 								>
-									Registration
-								</a>
+									Signup
+								</Link>
 							</li>
 							<li>
-								<a
-									href="/register.html"
+								<Link
+									href="/signin"
 									className="hover:text-primary"
 								>
-									Login
-								</a>
+									Signin
+								</Link>
 							</li>
 						</ul>
 					</div>
