@@ -9,6 +9,8 @@ import ViberLogo from "@/assets/images/social_icons/viber.svg";
 import Image from "next/image";
 import SingleProductPlaceholder from "./SingleProductPlaceholder";
 import { ErrorProduct } from "./ErrorProduct";
+import AddToCart from "./AddToCart";
+import FavoriteProducts from "./FavoriteProducts";
 
 type SingleProductProps = {
 	productId: string;
@@ -34,7 +36,13 @@ const SingleProduct = ({ productId }: SingleProductProps) => {
 								<div className="flex flex-col lg:flex-row gap-6">
 									<div className="w-full lg:w-1/2">
 										<div className="grid gap-4">
-											<div id="main-image-container">
+											<div
+												id="main-image-container"
+												className="relative"
+											>
+												<FavoriteProducts
+													product={product}
+												/>
 												<ProductImage
 													image={product.image}
 												/>
@@ -79,33 +87,17 @@ const SingleProduct = ({ productId }: SingleProductProps) => {
 													<strong> In Stock</strong>
 												</p>
 											</div>
-											<div className="text-2xl font-semibold mb-8">
-												{product.price}
+											<div className="flex items-center mb-4">
+												<span className="text-lg font-bold text-primary">
+													{product.salePrice}
+												</span>
+												<span className="text-sm line-through ml-2">
+													{product.regularPrice}
+												</span>
 											</div>
-											<div className="flex items-center mb-8">
-												<button
-													id="decrease"
-													className="bg-primary hover:bg-transparent border border-transparent hover:border-primary text-white hover:text-primary font-semibold w-10 h-10 rounded-full flex items-center justify-center focus:outline-none"
-													disabled
-												>
-													-
-												</button>
-												<input
-													id="quantity"
-													type="number"
-													defaultValue={1}
-													className="w-16 py-2 text-center focus:outline-none"
-												/>
-												<button
-													id="increase"
-													className="bg-primary hover:bg-transparent border border-transparent hover:border-primary text-white hover:text-primary font-semibold  w-10 h-10 rounded-full focus:outline-none"
-												>
-													+
-												</button>
+											<div className="w-2/4">
+												<AddToCart {...product} />
 											</div>
-											<button className="bg-primary border border-transparent hover:bg-transparent hover:border-primary text-white hover:text-primary font-semibold py-2 px-4 rounded-full">
-												Add to Cart
-											</button>
 										</div>
 										<div className="flex space-x-4 my-6">
 											<a
