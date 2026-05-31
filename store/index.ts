@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import persistedCartReducer from "@/minicart/store/reducers/persistedCartReducer";
 import { persistStore } from "redux-persist";
+import persistedCartReducer from "@/minicart/store/reducers/persistedCartReducer";
+import persistedAuthReducer from "@/auth/store/reducers/persistedAuthReducer";
 
 export const store = configureStore({
-	reducer: { cart: persistedCartReducer },
+	reducer: { cart: persistedCartReducer, auth: persistedAuthReducer },
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware({ serializableCheck: false }),
 });
