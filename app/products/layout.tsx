@@ -1,3 +1,4 @@
+import { Toaster } from "@/components/ui/sonner";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,6 +14,7 @@ export default function RootLayout({
 	return (
 		<div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
 			<main className="container mx-auto">{children}</main>
+			<Toaster />
 		</div>
 	);
 }
